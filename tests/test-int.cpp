@@ -50,6 +50,7 @@ TEST_P(IntTests, IntDiv)
   s->check_sat();
   Term resval = s->get_value(res);
   ASSERT_EQ(resval, two);
+  assert(false);
 }
 
 TEST_P(IntTests, Bv2Int)
