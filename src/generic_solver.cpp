@@ -269,6 +269,7 @@ string GenericSolver::run_command(string cmd, bool verify_success_flag) const
 {
   // adding a newline to simulate an "enter" hit.
   cmd = cmd + "\n";
+  std::cout << "panda cmd: " << cmd << std::endl;
   // writing the cmd string to the process
   write_internal(cmd);
   // reading the result
