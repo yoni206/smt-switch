@@ -96,6 +96,6 @@ TEST_P(UnitPrintTests, PrintValueAs)
 
 INSTANTIATE_TEST_SUITE_P(ParameterizedSolverPringUnit,
                          UnitPrintTests,
-                         testing::ValuesIn(available_non_generic_solver_configurations()));
+                         testing::ValuesIn(available_solver_configurations()));
 
 }  // namespace smt_tests

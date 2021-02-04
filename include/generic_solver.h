@@ -117,8 +117,17 @@ class GenericSolver : public AbsSmtSolver
   /******************
    * helper methods *
    *******************/
+
+  Term make_value(int64_t i, const Sort & sort) const;
+
+  Term make_value(const std::string val,
+                  const Sort & sort,
+                  uint64_t base = 10) const;
+
   // returns a string representation of a term in smtlib
   std::string to_smtlib_def(Term term) const;
+
+  void check_no_error(std::string str) const;
 
   // parse solver's response from get-sat-assumptions
   UnorderedTermSet get_assumptions_from_string(std::string result) const;
