@@ -856,8 +856,6 @@ Term GenericSolver::get_value(const Term & t) const
 
 string GenericSolver::strip_value_from_result(string result) const
 {
-  check_no_error(result);
-
   // trim spaces
   result = trim(result);
 
@@ -922,8 +920,6 @@ void GenericSolver::check_no_error(string str) const
 
 UnorderedTermSet GenericSolver::get_assumptions_from_string(string result) const
 {
-  check_no_error(result);
-
   // the result from the solver is a
   // space-separated list of Boolean literals.
   UnorderedTermSet literals;
