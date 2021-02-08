@@ -134,7 +134,7 @@ class GenericSolver : public AbsSmtSolver
   // when an SMT-LIB compliant solver is supposed
   // to return a result (e.g., get-value),
   // a result that starts with "(error " indicates
-  // that an error occurred. 
+  // that an error occurred.
   // This cannot be caught by print-success,
   // which is not utilized for commands that
   // expect a result.
