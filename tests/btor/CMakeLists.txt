@@ -1,6 +1,7 @@
 set(BTOR_TESTS
   btor-arrays
   btor-data-structures
+  btor-example
   btor-exceptions
   btor-indexed-op-tests
   btor-tests

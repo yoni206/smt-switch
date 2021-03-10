@@ -3,6 +3,7 @@ set(MSAT_TESTS
   msat-arrays
   msat-arrays2
   msat-data-structures
+  msat-example
   msat-incremental
   msat-traversal
   msat-int-arithmetic

@@ -1,6 +1,7 @@
 set(Z3_TESTS
   z3_test
   z3_full
+  z3-example
 )
 
 foreach(test ${Z3_TESTS})

@@ -1,6 +1,7 @@
 set(CVC4_TESTS
   cvc4-arrays
   cvc4-data-structures
+  cvc4-example
   cvc4-indexed-op-tests
   cvc4-int-arithmetic
   cvc4_test
