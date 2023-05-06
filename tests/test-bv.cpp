@@ -47,6 +47,18 @@ TEST_P(BVTests, to_int)
   Sort sort2 = s->make_sort(BV, 2);
   Term x1 = s->make_symbol("x1", sort1);
   Term x2 = s->make_symbol("x2", sort2);
+  /////////////////////////////
+  Term a = s->make_term(0, sort2);
+  Term b = s->make_term(1, sort2);
+  Term c = s->make_term(BVAdd, a, b);
+  std::cout << "configuration: " << GetParam() << std::endl;
+  std::cout << "c: " << c << std::endl;
+  if (c == b) {
+    std::cout << "equal" << std::endl;
+  } else {
+    std::cout << "not equal" << std::endl;
+  }
+  //////////////////////////
   s->check_sat();
   uint64_t i1 = s->get_value(x1)->to_int();
   uint64_t i2 = s->get_value(x2)->to_int();
