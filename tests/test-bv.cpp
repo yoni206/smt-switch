@@ -54,9 +54,9 @@ TEST_P(BVTests, to_int)
   std::cout << "configuration: " << GetParam() << std::endl;
   std::cout << "c: " << c << std::endl;
   if (c == b) {
-    std::cout << "equal" << std::endl;
+    std::cout << "evaluated" << std::endl;
   } else {
-    std::cout << "not equal" << std::endl;
+    std::cout << "did not evaluate" << std::endl;
   }
   //////////////////////////
   s->check_sat();
