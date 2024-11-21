@@ -452,7 +452,6 @@ Term TermTranslator::value_from_smt2(const std::string val,
     }
   }
   else if (sk == STRING){
-    std::cout << "panda val: " << val << std::endl;
     std::string new_val = val;
     if (val.length() > 1 && val.at(0) == '\"') {
       new_val = new_val.substr(1,new_val.length()-2);
