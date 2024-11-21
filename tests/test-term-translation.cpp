@@ -303,7 +303,10 @@ TEST_P(TranslationTests, Strings)
   TermTranslator to_s1(s1);
 
   Term t2 = to_s2.transfer_term(t);
-  EXPECT_EQ(t2->to_string(), "a");
+  EXPECT_EQ(t2->to_string(), t->to_string());
+
+  Term t1 = to_s1.transfer_term(t2);
+  EXPECT_EQ(t, t1);
 }
 
 TEST_P(BoolArrayTranslationTests, Arrays)
