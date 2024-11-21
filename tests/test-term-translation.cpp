@@ -294,6 +294,20 @@ TEST_P(TranslationTests, UninterpretedSort)
   EXPECT_EQ(fv, fv_1);
 }
 
+TEST_P(TranslationTests, Strings)
+{
+  Sort strsort = s1->make_sort(STRING);
+  Term t = s1->make_term("a", true, strsort);
+  std::cout << "panda t: " << t << std::endl;
+  std::cout << "panda t->to_string: " << t->to_string() << std::endl;
+  TermTranslator to_s2(s2);
+  TermTranslator to_s1(s1);
+
+  Term t2 = to_s2.transfer_term(t);
+  EXPECT_EQ(t2->to_string(), "a");
+
+}
+
 TEST_P(BoolArrayTranslationTests, Arrays)
 {
   Term f = s1->make_term(false);
